@@ -24,11 +24,10 @@ app.controller('zi', function($rootScope,$scope){
     $scope.$emit("someKIN", {msg:"子 Controller 往父 Controller1"});
     $scope.$on("some", function(event, data) {
         // 这里取到发送过来的数据 data
-        console.log(data);
+        console.log(data,123);
     });
 });
 //兄弟控制器通信
-
 app.controller('br', function($rootScope,$scope,Data,DataS1){
 
     console.log(Data,DataS1);
@@ -46,4 +45,3 @@ app.service('DataS1',function() {
 });
 
 //依赖注入
-
